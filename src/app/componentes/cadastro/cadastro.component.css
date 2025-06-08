@@ -1,0 +1,22 @@
+.formulario{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 2%;
+    border: 1px solid #e8a249;
+    border-radius: 14px;
+    position: relative;
+    background-color: #e8a249;
+}
+
+.erro {
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
+}
+
+
+
+.mb-3 {
+    color: white;
+}
