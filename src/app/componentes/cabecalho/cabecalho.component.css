@@ -5,15 +5,15 @@
 }
 
 .nav-link{
-    color: white !important;
+    color: rgba(255, 255, 255, 0.85)  !important;
 }
 .navbar-brand{
-    color: white;
+    color: rgba(255, 255, 255, 0.85);
 
 }
 
 .navbar{
     height: 35px;
-    color: white;
-}
+   color: rgba(255, 255, 255, 0.85);
 
+}

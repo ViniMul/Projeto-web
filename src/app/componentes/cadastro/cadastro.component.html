@@ -1,4 +1,7 @@
+<div class = "telacadastro">
+<div class = "fundo-curvas">
 <form class="formulario" (ngSubmit)="salvar()" #form="ngForm">
+  <h2 class="titulo-cadastro">Faça seu cadastro</h2>
   <label class="mb-3">Nome:</label>
   <input class="form-control" type="text" name="nome" id="nome" (change)="validaNome()" [(ngModel)]="usuario.nome" required />
   <span class = "erro" *ngIf ="isNome">Nome Invalido</span>
@@ -14,6 +17,9 @@
   <span class = "erro" *ngIf ="isSenha">Senha Invalido</span>
   <br/>
 
-  <button class="form-control" type="submit" [disabled]="form.invalid">{{ usuario.id ? 'Atualizar Usuario' : 'Cadastrar Usuario'}}</button>
-
+  <div class = "botao">
+  <button class="btn-laranja" type="submit" [disabled]="form.invalid">{{ usuario.id ? 'Atualizar Usuario' : 'Cadastrar Usuario'}}</button>
+  </div>
 </form>
+</div>
+</div>
