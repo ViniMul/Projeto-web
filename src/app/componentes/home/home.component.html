@@ -1,0 +1,15 @@
+<div class="grid-filmes">
+  <div class="card" *ngFor="let filme of filmes">
+    <img [src]="filme.capa" [alt]="filme.titulo" />
+    <div class="info">
+      <h3>{{ filme.titulo }}</h3>
+      <p>{{ filme.tipo }} • {{ filme.ano }}</p>
+      <div class="rating-favorito">
+        <span>⭐ {{ filme.rating }}</span>
+        <button class="favorite-btn" (click)="filme.favorito = !filme.favorito">
+        <span>{{ filme.favorito ? '❤️' : '🤍' }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+::ng-deep .mattoolbar{
+    z-index: 999;
+    position: fixed;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1a18; /* tom escuro próximo ao fundo da página */
+    color: #dcdcdc;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #f4a742;        
+    font-size: 0.9rem;
+    height: 20px;
+    z-index: 999;
+    width: 100%;
+}
+.footer span{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+}
+
+
+span#url{
+    font-size: 12px;
+}

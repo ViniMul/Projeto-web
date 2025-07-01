@@ -1,0 +1,19 @@
+
+
+.dedo{
+    cursor: pointer;
+}
+
+.nav-link{
+    color: rgba(255, 255, 255, 0.85)  !important;
+}
+.navbar-brand{
+    color: rgba(255, 255, 255, 0.85);
+
+}
+
+.navbar{
+    height: 35px;
+   color: rgba(255, 255, 255, 0.85);
+
+}

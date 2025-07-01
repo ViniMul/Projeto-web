@@ -1,0 +1,93 @@
+.form-group{
+    color: rgba(255, 255, 255, 0.85);
+    
+}
+.tela {
+    width: 100vw;
+    height: 100vh;
+background: linear-gradient(to top right, #f89c1c, #2b2321);
+    z-index: 1;
+    position: fixed; /* ou absolute dependendo do seu layout */
+    top: 0;
+    left: 0;
+}
+.login{
+   position: fixed;
+   top: 0;
+   left: 55%;
+   width: 30vw;
+   height: 40vh;
+   z-index: 1;
+    display:  grid;
+    place-items: center;
+
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.05); /* fundo branco bem transparente */
+  border-radius: 20px;
+  backdrop-filter: blur(60px); /* efeito vidro fosco */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 20px 62px rgba(0, 0, 0, 0.25);
+  color: white;
+  width: 27vw;
+  height: 45vh;
+  left: 55%;
+  top: 0;
+  z-index: 1;
+  display:  grid;
+  place-items: center;
+   margin-top: 49%;
+   
+
+}
+img{
+  position: absolute;
+  z-index: 999;
+  width: 35%;
+  height: 50%;
+  border-radius: 20px;
+  left: 12%;
+  bottom: 23%;
+}
+
+
+.container{
+    color: rgba(255, 255, 255, 0.85);
+    
+    
+}
+
+button {
+    background-color: #f89c1c;
+    color: white; /* mantém o texto legível */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.linkcadastrar{
+    text-align: center;
+    color:#3498db;
+}
+
+.btn-laranja {
+    background-color: #f89c1c; /* laranja base */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-laranja:hover {
+    background-color: #ffae3c; /* mais clara ao passar o mouse */
+}
+
+.btn-laranja:active {
+    background-color: #ffd17c; /* ainda mais clara ao clicar */
+}
