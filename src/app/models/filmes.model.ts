@@ -1,9 +1,9 @@
 export interface Filme {
-  id?: number;
-  titulo: string;
-  tipo: string;
-  capa: string;
-  ano: number;
-  favorito: boolean;
-  rating: number;
+  id?: any;
+  titulo: any;
+  tipo: any;
+  capa: any;
+  ano: any;
+  favorito: any;
+  rating: any;
 }

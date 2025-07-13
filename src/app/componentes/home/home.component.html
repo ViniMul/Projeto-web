@@ -6,9 +6,9 @@
       <p>{{ filme.tipo }} • {{ filme.ano }}</p>
       <div class="rating-favorito">
         <span>⭐ {{ filme.rating }}</span>
-        <button class="favorite-btn" (click)="filme.favorito = !filme.favorito">
+        <button class="favorite-btn" (click)="alternarFavorito(filme)">
         <span>{{ filme.favorito ? '❤️' : '🤍' }}</span>
-        </button>
+      </button>
       </div>
     </div>
   </div>

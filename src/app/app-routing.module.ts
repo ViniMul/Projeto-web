@@ -6,10 +6,12 @@ import { CadastroComponent } from './componentes/cadastro/cadastro.component';
 import { ListarUsuarioComponent } from './componentes/listar-usuario/listar-usuario.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent, canActivate:[AuthGuard]},
+  {path: 'home', component: HomeComponent },
+  { path: 'favoritos', component: FavoritosComponent },
   {path: 'consulta', component: BuscaCepComponent, canActivate:[AuthGuard]},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'cadastro/:id', component: CadastroComponent,canActivate:[AuthGuard]},

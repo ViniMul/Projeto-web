@@ -1,0 +1,63 @@
+.favoritos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.movie-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.poster {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.card-footer {
+  background-color: #2b2321;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.title {
+  color: #f89c1c;
+  font-size: 14px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.favorite-icon {
+  font-size: 18px;
+  color: red;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+}
+
+.favorite-btn span {
+  color: #f89c1c;
+  transition: color 0.3s;
+}
+
+.favorite-btn span.favorited {
+  color: red;
+}

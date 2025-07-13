@@ -1,34 +1,44 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Filme } from '../models/filmes.model';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Filme } from '../models/filmes.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FilmesService {
-
-  private api = 'http://localhost:3000/api/filmes';
+export class FilmeService {
+  private baseUrl = 'http://localhost:3000/filmes';
 
   constructor(private http: HttpClient) {}
 
-  getListar(): Observable<Filme[]> {
-    return this.http.get<Filme[]>(this.api);
+  // 🔄 Listar todos os filmes
+  listar(): Observable<Filme[]> {
+    return this.http.get<Filme[]>(this.baseUrl);
   }
 
-  postCriar(filme: Filme): Observable<Filme> {
-    return this.http.post<Filme>(this.api, filme);
+  // 🆕 Criar novo filme
+  criar(filme: Filme): Observable<Filme> {
+    return this.http.post<Filme>(this.baseUrl, filme);
   }
 
-  getListarPorId(id: number): Observable<Filme> {
-    return this.http.get<Filme>(`${this.api}/${id}`);
+  // ✏️ Atualizar filme
+  atualizar(id: number, filme: Filme): Observable<Filme> {
+    return this.http.put<Filme>(`${this.baseUrl}/${id}`, filme);
   }
 
-  atualizar(id: number, filme: Partial<Filme>): Observable<Filme> {
-    return this.http.put<Filme>(`${this.api}/${id}`, filme);
+  // ❌ Deletar filme
+  deletar(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 
-  deletar(id: number): Observable<any> {
-    return this.http.delete(`${this.api}/${id}`);
+  // ❤️ Favoritar/Desfavoritar
+  favoritar(id: number, favorito?: boolean): Observable<Filme> {
+    const body = favorito !== undefined ? { favorito } : {};
+    return this.http.patch<Filme>(`${this.baseUrl}/${id}/favoritar`, body);
+  }
+
+  // ⭐ Listar favoritos
+  listarFavoritos(): Observable<Filme[]> {
+    return this.http.get<Filme[]>(`${this.baseUrl}/favoritos`);
   }
 }

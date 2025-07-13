@@ -1,0 +1,17 @@
+<div *ngIf="favoritos.length === 0" class="mensagem-vazia">
+  Nenhum filme favoritado ainda.
+</div>
+
+<!-- Grid de favoritos -->
+<div class="favoritos-grid">
+  <div class="movie-card" *ngFor="let filme of favoritos">
+    <img [src]="filme.capa" [alt]="filme.titulo" class="poster" />
+    <div class="card-footer">
+      <h3 class="title">{{ filme.titulo }}</h3>
+      <button class="favorite-btn" (click)="alternarFavorito(filme)">
+        <span [ngClass]="{ 'favorited': filme.favorito }">
+          {{ filme.favorito ? '❤️' : '🤍' }}
+        </span>
+      </button>
+    </div>
+  </div>

@@ -14,7 +14,8 @@ import { ListarUsuarioComponent } from './componentes/listar-usuario/listar-usua
 import { LoginComponent } from './componentes/login/login.component';
 import { Router } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FilmesService } from './services/filmes.service';
+import { FilmeService } from './services/filmes.service';
+import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
 
 
@@ -28,6 +29,7 @@ import { FilmesService } from './services/filmes.service';
     CadastroComponent,
     ListarUsuarioComponent,
     LoginComponent,
+    FavoritosComponent,
     //HomeComponent,
   ],
   imports: [
